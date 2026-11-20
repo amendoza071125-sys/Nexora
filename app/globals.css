@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{--bg:247 249 255;--surface:255 255 255;--ink:10 19 48;--muted:84 96 128;--line:220 227 245;--brand:43 92 255}
+.dark{--bg:7 12 30;--surface:14 23 52;--ink:235 240 255;--muted:150 163 200;--line:32 45 85;--brand:91 130 255}
+html{scroll-behavior:smooth}
+body{@apply bg-bg text-ink font-sans antialiased}
+:focus-visible{outline:3px solid rgb(var(--brand));outline-offset:2px;border-radius:6px}
+.dots{background-image:radial-gradient(rgba(120,160,255,.28) 1px,transparent 1.5px);background-size:22px 22px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media print{header,footer,.no-print{display:none!important}body{background:#fff!important;color:#000!important}}
